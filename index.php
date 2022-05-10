@@ -92,16 +92,16 @@ $products = array(
 
  foreach($products as $cat1 =>$val1){
      
-              
+    if($cat1=="Electronics")
     foreach($val1 as $sub_cat=>$val2){
         
-
+        if($sub_cat=="Mobile")
         foreach($val2 as $sub_cat2 =>$val3)
         {   
             echo("<tr>");
-            echo("<td> $cat1</td>");
+            echo("<td> $cat1</td>"); 
             echo("<td> $sub_cat</td>");
-            //echo("<td> $sub_cat2 </td>");
+           // echo("<td> $sub_cat2 </td>");
 
             foreach($val3 as $sub_cat3=> $final_vall ){
                 
