@@ -88,32 +88,43 @@ $products = array(
     )
         );
         echo("<table>");
-        echo("<tr><th>Category</th><th>Sub-Category</th><th>ID</th><th>Name</th><th>Brand</th></tr>");
+       // echo("<tr><th>Category</th><th>Sub-Category</th><th>ID</th><th>Name</th><th>Brand</th></tr>");
 
  foreach($products as $cat1 =>$val1){
      
-    if($cat1=="Electronics")
+    
     foreach($val1 as $sub_cat=>$val2){
         
-        if($sub_cat=="Mobile")
+       
         foreach($val2 as $sub_cat2 =>$val3)
         {   
-            echo("<tr>");
-            echo("<td> $cat1</td>"); 
-            echo("<td> $sub_cat</td>");
-           // echo("<td> $sub_cat2 </td>");
-
-            foreach($val3 as $sub_cat3=> $final_vall ){
+           // echo("<tr>");
+           // echo("<td> $cat1</td>"); 
+          //  
+           // 
+             if( $val3['brand']=="Samsung") {
+                echo("<br><br>");
+               
                 
-              
+                foreach($val3 as $sub_cat3=> $final_vall ){
                 
-                
-                echo("<td> $final_vall </td>");
+                    
+                 echo("$sub_cat3 ". " $final_vall <br>");
+                 
+                 
+             
+             
                 
                   
                 
-             }
-             echo("</tr>");
+                }
+                echo("Category: $cat1 <br>");
+
+                 echo("Sub-Category: $sub_cat <br>");
+               }
+           
+            
+             //echo("</tr>");
              
            
 
